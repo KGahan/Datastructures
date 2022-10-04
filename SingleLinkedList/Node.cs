@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SingleLinkedList
 {
-    internal class Node
+    public class Node
     {
         public Object data;
         public Node next;

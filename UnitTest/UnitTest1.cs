@@ -24,7 +24,10 @@ namespace UnitTest
         public void TestLinkedList_AddItems_ReturnsCorrectList()
         {
             SingleLinkedList.SingleLinkedList list= new SingleLinkedList.SingleLinkedList();
-
+            list.InsertFirst(1);
+            list.InsertFirst(2);
+            list.InsertFirst(3);
+            Assert.AreEqual(list.Last(), 1);
         }
     }
 }

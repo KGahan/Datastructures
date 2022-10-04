@@ -4,7 +4,7 @@ class Programm
 {
     static void Main(string[] args)
     {
-        SingleLinkedList<int> singleLinkedList = new SingleLinkedList<int>();
+        SingleLinkedList.SingleLinkedList singleLinkedList = new SingleLinkedList.SingleLinkedList();
         singleLinkedList.InsertFirst(2);
         singleLinkedList.InsertFirst(3);
         singleLinkedList.InsertFirst(4);
