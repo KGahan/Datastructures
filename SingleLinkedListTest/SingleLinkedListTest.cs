@@ -52,5 +52,26 @@ namespace UnitTest
             object current = list.First();
             Assert.AreEqual(4, list.Count());
         }
+
+        [Test]
+        public void TestLinkedList_InsertFirst_ReturnsCorrectList()
+        {
+            SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
+            list.InsertFirst(1);
+            list.InsertFirst(2);
+            list.InsertFirst(3);
+            Assert.AreEqual(3, list.First());
+        }
+
+        [Test]
+        public void TestLinkedList_InsertLast_ReturnsCorrectList()
+        {
+            SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
+            list.InsertFirst(1);
+            list.InsertFirst(2);
+            list.InsertFirst(3);
+            list.InsertLast(7);
+            Assert.AreEqual(7, list.Last());
+        }
     }
 }
