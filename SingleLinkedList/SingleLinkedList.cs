@@ -138,5 +138,26 @@ namespace SingleLinkedList
 
             return count;
         }
+
+        public Node GetElement(Object element)
+        { 
+            Node current = head;
+
+            while (!current.data.Equals(element))
+            {
+                current = current.next;  
+            }
+            return current;
+        }
+
+        public void InsertAfter(Object before, Object value)
+        {
+            Node node = new Node(value);
+            Node getElement = GetElement(before);
+            Node after = getElement.next;   
+
+            getElement.next = node;
+            getElement.next.next = after;
+        }
     }   
 }
