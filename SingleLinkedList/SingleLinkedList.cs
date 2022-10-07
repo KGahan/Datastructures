@@ -123,5 +123,20 @@ namespace SingleLinkedList
 
             return last.data;
         }
+
+        public int Count()
+        {
+            Node current = head;
+
+            int count = 1;
+
+            while (current.next != null)
+            {
+                current = current.next;
+                count++;
+            }
+
+            return count;
+        }
     }   
 }

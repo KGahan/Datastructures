@@ -10,7 +10,7 @@ namespace UnitTest
         {
         }
 
-        [Test]
+        /*[Test]
         public void Test1()
         {
             CustomStack<int> stack = new CustomStack<int>();
@@ -18,7 +18,7 @@ namespace UnitTest
             stack.Push(1);
             Assert.AreEqual(stack.size(), 1);
             Assert.Pass();
-        }
+        }*/
 
         [Test]
         public void TestLinkedList_AddItems_ReturnsCorrectList()
@@ -28,6 +28,17 @@ namespace UnitTest
             list.InsertFirst(2);
             list.InsertFirst(3);
             Assert.AreEqual(list.Last(), 1);
+        }
+
+
+        [Test]
+        public void TestLinkedList_CountItems_ReturnsCorrectList()
+        {
+            SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
+            list.InsertFirst(1);
+            list.InsertFirst(2);
+            list.InsertFirst(3);
+            Assert.AreEqual(3, list.Count());
         }
     }
 }
