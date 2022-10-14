@@ -98,12 +98,10 @@ namespace SingleLinkedList
                 {
                     previous = previous.next;
                 }
-
                 Node newNode = new Node(_value);
                 _next = previous.next;
                 previous.next = newNode;
                 newNode.next = _next;
-
                 index++;
             }
         }
@@ -121,7 +119,6 @@ namespace SingleLinkedList
             {
                 last = last.next;
             }
-
             return last.data;
         }
 
@@ -136,16 +133,21 @@ namespace SingleLinkedList
                 current = current.next;
                 count++;
             }
-
             return count;
         }
 
         public Node GetElement(Object element)
-        { 
+        {
             Node current = head;
 
             while (!current.data.Equals(element))
             {
+                if(current.next != null) 
+                {
+                    Node node = new Node(null);
+                    return node; 
+                }
+
                 current = current.next;  
             }
             return current;
@@ -159,6 +161,27 @@ namespace SingleLinkedList
 
             getElement.next = node;
             getElement.next.next = after;
+        }
+
+        public bool DeleteNode(Node node)
+        {
+            Node current = head;
+            Node next;
+            int index = 0;
+
+            while (!current.data.Equals(node.data))
+            {
+                if(current.next == null)
+                {
+                    return false;
+                }
+                current = current.next;
+            }
+
+            index++;
+            DeleteAt(index);
+
+            return true;
         }
     }   
 }

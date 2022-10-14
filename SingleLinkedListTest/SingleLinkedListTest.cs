@@ -10,29 +10,18 @@ namespace UnitTest
         {
         }
 
-        /*[Test]
-        public void Test1()
-        {
-            CustomStack<int> stack = new CustomStack<int>();
-            Assert.AreEqual(stack.size(), 0);
-            stack.Push(1);
-            Assert.AreEqual(stack.size(), 1);
-            Assert.Pass();
-        }*/
-
         [Test]
-        public void TestLinkedList_AddItems_ReturnsCorrectList()
+        public void TestLinkedListCount_AddItems_ReturnsCorrectCount()
         {
             SingleLinkedList.SingleLinkedList list= new SingleLinkedList.SingleLinkedList();
             list.InsertFirst(1);
             list.InsertFirst(2);
             list.InsertFirst(3);
-            Assert.AreEqual(list.Last(), 1);
+            Assert.AreEqual(3, list.Count());
         }
 
-
         [Test]
-        public void TestLinkedList_CountItems_ReturnsCorrectList()
+        public void TestLinkedList_CountItems_ReturnsCorrectNumberOfElements()
         {
             SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
             list.InsertFirst(1);
@@ -50,7 +39,7 @@ namespace UnitTest
             list.InsertFirst(3);
             list.InsertAfter(2, 7);
             object current = list.First();
-            Assert.AreEqual(4, list.Count());
+            Assert.AreEqual(3, list.Count());
         }
 
         [Test]
@@ -72,6 +61,29 @@ namespace UnitTest
             list.InsertFirst(3);
             list.InsertLast(7);
             Assert.AreEqual(7, list.Last());
+        }
+
+        /*[Test]
+        public void TestLinkedList_GetNode_ReturnsCorrectList()
+        {
+            SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
+            list.InsertFirst(1);
+            list.InsertFirst(2);
+            list.InsertFirst(3);
+            list.InsertLast(7);
+            //Assert.AreEqual(8, list.GetElement(8).data);
+        }*/
+
+        [Test]
+        public void TestLinkedList_DeleteNode_ReturnsCorrectList()
+        {
+            SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
+            list.InsertFirst(1);
+            list.InsertFirst(2);
+            list.InsertFirst(3);
+            list.InsertLast(7);
+            list.DeleteNode(list.GetElement(3));
+            Assert.AreEqual(3, list.Count());
         }
     }
 }
