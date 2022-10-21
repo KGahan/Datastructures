@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SingleLinkedList
+﻿namespace SingleLinkedList
 {
     public class SingleLinkedList
     {
@@ -136,6 +130,7 @@ namespace SingleLinkedList
             return count;
         }
 
+<<<<<<< Updated upstream
         public Node? GetElement(Object element)
         {
             Node current = head;
@@ -182,6 +177,36 @@ namespace SingleLinkedList
             DeleteAt(index);
 
             return true;
+=======
+        public String SwitchNodes(Node node1, Node node2)
+        {
+            Node current = head;
+            int number = 4;
+
+            while (current.data != node1.data)
+            { 
+                current = current.next;
+                if(current.next == null)
+                {
+                    return "First Node doesn't exist!";
+                }
+            }
+
+            current.data = node2.data;
+
+            while (current.next.data != node2.data)
+            {
+                current = current.next;
+                if (current.next.next == null)
+                {
+                    return "Second Node doesn't exist!";
+                }
+            }
+           
+            current.next.data = number;
+
+            return "worked";
+>>>>>>> Stashed changes
         }
     }   
 }
