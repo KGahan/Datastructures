@@ -26,7 +26,7 @@ class Programm
 <<<<<<< Updated upstream
         //Console.Write(singleLinkedList.First());
 
-        */ SingleLinkedList.SingleLinkedList singleLinkedList = new SingleLinkedList.SingleLinkedList();
+        SingleLinkedList.SingleLinkedList singleLinkedList = new SingleLinkedList.SingleLinkedList();
         singleLinkedList.InsertFirst(2);
         singleLinkedList.InsertFirst(3);
         singleLinkedList.InsertFirst(4);
@@ -35,8 +35,8 @@ class Programm
         singleLinkedList.InsertAfter(3, 7);
         singleLinkedList.printAllNodes();
         singleLinkedList.Count();
-=======
          Console.Write(singleLinkedList.First());*/
->>>>>>> Stashed changes
+
+
     }
 }

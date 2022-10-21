@@ -130,7 +130,6 @@
             return count;
         }
 
-<<<<<<< Updated upstream
         public Node? GetElement(Object element)
         {
             Node current = head;
@@ -166,7 +165,7 @@
 
             while (!current.data.Equals(node.data))
             {
-                if(current.next == null)
+                if (current.next == null)
                 {
                     return false;
                 }
@@ -177,7 +176,8 @@
             DeleteAt(index);
 
             return true;
-=======
+        }
+
         public String SwitchNodes(Node node1, Node node2)
         {
             Node current = head;
@@ -194,19 +194,18 @@
 
             current.data = node2.data;
 
-            while (current.next.data != node2.data)
+            while (current.data != node2.data)
             {
                 current = current.next;
-                if (current.next.next == null)
+                if (current.next == null)
                 {
                     return "Second Node doesn't exist!";
                 }
             }
            
-            current.next.data = number;
+            current.data = node1.data;
 
             return "worked";
->>>>>>> Stashed changes
         }
     }   
 }

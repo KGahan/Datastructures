@@ -84,8 +84,25 @@ namespace UnitTest
             list.InsertFirst(1);
             list.InsertFirst(2);
             list.InsertFirst(3);
-            Node node1 = list.Node
-            Assert.AreEqual(3, list.Count());
+            Node? node1 = list.GetElement(3);
+            Node? node2 = list.GetElement(1);
+            list.SwitchNodes(node1, node2);
+
+            Assert.AreEqual(1, list.head.data);
+        }
+
+        [Test]
+        public void TestLinkedList_SwitchItems_ReturnsFalseList()
+        {
+            SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
+            list.InsertFirst(1);
+            list.InsertFirst(2);
+            list.InsertFirst(3);
+            Node? node1 = list.GetElement(3);
+            Node? node2 = list.GetElement(1);
+           
+            Assert.AreEqual("Second Node doesn't exist!", list.SwitchNodes(node1, node2));
+            list.printAllNodes();
         }
     }
 }
