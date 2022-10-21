@@ -8,36 +8,71 @@ namespace UnitTest
         [SetUp]
         public void Setup()
         {
+
         }
 
-        /*[Test]
-        public void Test1()
-        {
-            CustomStack<int> stack = new CustomStack<int>();
-            Assert.AreEqual(stack.size(), 0);
-            stack.Push(1);
-            Assert.AreEqual(stack.size(), 1);
-            Assert.Pass();
-        }*/
-
         [Test]
-        public void TestLinkedList_AddItems_ReturnsCorrectList()
+        public void TestLinkedListCount_AddItems_ReturnsCorrectCount()
         {
             SingleLinkedList.SingleLinkedList list= new SingleLinkedList.SingleLinkedList();
             list.InsertFirst(1);
             list.InsertFirst(2);
             list.InsertFirst(3);
-            Assert.AreEqual(list.Last(), 1);
+            Assert.AreEqual(3, list.Count());
         }
 
-
         [Test]
-        public void TestLinkedList_CountItems_ReturnsCorrectList()
+        public void TestLinkedListInsertFirst_AddItems_ReturnsCorrectNumberOfElements()
         {
             SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
             list.InsertFirst(1);
             list.InsertFirst(2);
             list.InsertFirst(3);
+            Assert.AreEqual(3, list.Count());
+        }
+
+        [Test]
+        public void TestLinkedList_InsertLast_ReturnsCorrectLastElement()
+        {
+            SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
+            list.InsertFirst(1);
+            list.InsertFirst(2);
+            list.InsertFirst(3);
+            list.InsertLast(7);
+            Assert.AreEqual(7, list.Last().data);
+        }
+
+        [Test]
+        public void TestLinkedListInserAfter_AddItems_ReturnsCorrectOrderdList()
+        {
+            SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
+            list.InsertFirst(1);
+            list.InsertFirst(2);
+            list.InsertFirst(3);
+            list.InsertAfter(2, 7);
+            object current = list.First();
+            Assert.AreEqual(7, list.First().next.next.data);
+        }
+
+        [Test]
+        public void TestLinkedList_GetNode_ReturnsCorrectDataOfElement()
+        {
+            SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
+            list.InsertFirst(1);
+            list.InsertFirst(2);
+            list.InsertFirst(3);
+            Assert.AreEqual(2, list.GetElement(2).data);
+        }
+
+        [Test]
+        public void TestLinkedList_DeleteNode_ReturnsCorrectNumberOfElements()
+        {
+            SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
+            list.InsertFirst(1);
+            list.InsertFirst(2);
+            list.InsertFirst(3);
+            list.InsertLast(7);
+            list.DeleteNode(list.GetElement(3));
             Assert.AreEqual(3, list.Count());
         }
     }
