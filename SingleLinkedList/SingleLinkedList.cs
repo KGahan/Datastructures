@@ -106,12 +106,12 @@ namespace SingleLinkedList
             }
         }
 
-        public object First()
+        public Node First()
         {
-            return head.data;
+            return head;
         }
 
-        public object Last()
+        public Node Last()
         {
             Node last = head;
 
@@ -119,7 +119,7 @@ namespace SingleLinkedList
             {
                 last = last.next;
             }
-            return last.data;
+            return last;
         }
 
         public int Count()
@@ -136,13 +136,13 @@ namespace SingleLinkedList
             return count;
         }
 
-        public Node GetElement(Object element)
+        public Node? GetElement(Object element)
         {
             Node current = head;
 
             while (!current.data.Equals(element))
             {
-                if(current.next != null) 
+                if(current.next == null) 
                 {
                     Node node = new Node(null);
                     return node; 
