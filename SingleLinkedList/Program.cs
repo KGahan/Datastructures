@@ -11,15 +11,19 @@ class Programm
         singleLinkedList.InsertFirst(5);
         singleLinkedList.printAllNodes();
 
-        singleLinkedList.InsertLast(1);
+        Console.WriteLine(singleLinkedList.SwitchNodes(singleLinkedList.head.next, singleLinkedList.head.next.next.next));
         singleLinkedList.printAllNodes();
 
-        singleLinkedList.DeleteAt(2);
-        singleLinkedList.printAllNodes();
+        /* singleLinkedList.InsertLast(1);
+         singleLinkedList.printAllNodes();
 
-        singleLinkedList.InsertAt(2, 2);
-        singleLinkedList.printAllNodes();
+         singleLinkedList.DeleteAt(2);
+         singleLinkedList.printAllNodes();
 
+         singleLinkedList.InsertAt(2, 2);
+         singleLinkedList.printAllNodes();
+
+<<<<<<< Updated upstream
         //Console.Write(singleLinkedList.First());
 
         */ SingleLinkedList.SingleLinkedList singleLinkedList = new SingleLinkedList.SingleLinkedList();
@@ -31,5 +35,8 @@ class Programm
         singleLinkedList.InsertAfter(3, 7);
         singleLinkedList.printAllNodes();
         singleLinkedList.Count();
+=======
+         Console.Write(singleLinkedList.First());*/
+>>>>>>> Stashed changes
     }
 }

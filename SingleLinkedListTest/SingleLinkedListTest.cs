@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using SingleLinkedList;
 using Stack;
 
 namespace UnitTest
@@ -73,6 +74,17 @@ namespace UnitTest
             list.InsertFirst(3);
             list.InsertLast(7);
             list.DeleteNode(list.GetElement(3));
+            Assert.AreEqual(3, list.Count());
+        }
+
+        [Test]
+        public void TestLinkedList_SwitchItems_ReturnsCorrectList()
+        {
+            SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
+            list.InsertFirst(1);
+            list.InsertFirst(2);
+            list.InsertFirst(3);
+            Node node1 = list.Node
             Assert.AreEqual(3, list.Count());
         }
     }
