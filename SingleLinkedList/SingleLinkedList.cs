@@ -192,7 +192,21 @@
             }
             return false;
         }
+        public override string ToString()
+        {
+            string retval = "";
+            if (head == null)
+                return "No elements in List";
 
+            var node = head;
+            while (node != null)
+            {
+                retval += "| " + node.data + " ";
+                node = node.next;
+            }
+            retval += "|";
+            return retval;
+        }
         public void SwitchNodes(Node node1, Node node2)
         {
             if (!Exists(node1) || !Exists(node2)) return;
