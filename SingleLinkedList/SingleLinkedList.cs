@@ -178,34 +178,26 @@
             return true;
         }
 
-        public String SwitchNodes(Node node1, Node node2)
+        public bool Exists(Node node)
         {
-            Node current = head;
-            int number = 4;
-
-            while (current.data != node1.data)
-            { 
-                current = current.next;
-                if(current.next == null)
-                {
-                    return "First Node doesn't exist!";
-                }
-            }
-
-            current.data = node2.data;
-
-            while (current.data != node2.data)
+            Node currentNode = head;
+            while(currentNode != node)
             {
-                current = current.next;
-                if (current.next == null)
+                 
+                if (currentNode.next == node)
                 {
-                    return "Second Node doesn't exist!";
+                    return true;
                 }
+                currentNode = currentNode.next;
             }
-           
-            current.data = node1.data;
+            return false;
+        }
 
-            return "worked";
+        public void SwitchNodes(Node node1, Node node2)
+        {
+            if (!Exists(node1) || !Exists(node2)) return;
+
+            (node1.data, node2.data) = (node2.data, node1.data);
         }
     }   
 }

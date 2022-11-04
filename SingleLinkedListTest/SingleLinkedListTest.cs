@@ -78,31 +78,28 @@ namespace UnitTest
         }
 
         [Test]
-        public void TestLinkedList_SwitchItems_ReturnsCorrectList()
+        public void TestLSwitchNode_SecondIsFirstNode_ReturnsSwitchedList() 
         {
             SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
-            list.InsertFirst(1);
-            list.InsertFirst(2);
-            list.InsertFirst(3);
-            Node? node1 = list.GetElement(3);
-            Node? node2 = list.GetElement(1);
+            list.InsertLast(1);
+            list.InsertLast(2);
+            Node node1 = list.GetElement(1);
+            Node node2 = list.GetElement(2);
             list.SwitchNodes(node1, node2);
-
-            Assert.AreEqual(1, list.head.data);
+            Assert.AreEqual(list.First().data, 2);
+            Assert.AreEqual(list.Last(), 1);
         }
 
         [Test]
-        public void TestLinkedList_SwitchItems_ReturnsFalseList()
+        public void TestSwitchedNodes_NodeDoesntExist_Error()
         {
             SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
-            list.InsertFirst(1);
-            list.InsertFirst(2);
-            list.InsertFirst(3);
-            Node? node1 = list.GetElement(3);
-            Node? node2 = list.GetElement(1);
-           
-            Assert.AreEqual("Second Node doesn't exist!", list.SwitchNodes(node1, node2));
-            list.printAllNodes();
+            list.InsertLast(1);
+            list.InsertLast(2);
+            Node node1 = list.GetElement(3);
+            Node node2 = list.GetElement(1);
+            list.SwitchNodes(node1, node2);
+            Assert.AreEqual(list.head.data, 1);
         }
     }
 }
