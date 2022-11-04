@@ -87,7 +87,7 @@ namespace UnitTest
             Node node2 = list.GetElement(2);
             list.SwitchNodes(node1, node2);
             Assert.AreEqual(list.First().data, 2);
-            Assert.AreEqual(list.Last(), 1);
+            Assert.AreEqual(list.Last().data, 1);
         }
 
         [Test]

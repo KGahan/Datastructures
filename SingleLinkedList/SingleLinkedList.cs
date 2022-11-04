@@ -181,6 +181,7 @@
         public bool Exists(Node node)
         {
             Node currentNode = head;
+            if (currentNode == node) return true;
             while(currentNode != node)
             {
                  
