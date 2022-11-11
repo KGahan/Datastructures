@@ -250,5 +250,22 @@
                 currentNode = currentNode.next;
             }
         }
+
+        public void InsertionSortReverse()
+        {
+            Node currentNode = head.next;
+            while (currentNode != null)
+            {
+                for (var current = head; current != null; current = current.next)
+                {
+                    if (current == currentNode)
+                        break;
+                    if ((int)current.data > (int)currentNode.data)
+                        continue;
+                    (current.data, currentNode.data) = (currentNode.data, current.data);
+                }
+                currentNode = currentNode.next;
+            }
+        }
     }   
 }
