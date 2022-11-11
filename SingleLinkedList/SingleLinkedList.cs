@@ -129,8 +129,7 @@
             }
             return count;
         }
-
-        public Node? GetElement(Object element)
+        public Node GetElement(Object element)
         {
             Node current = head;
 
@@ -146,7 +145,6 @@
             }
             return current;
         }
-
         public void InsertAfter(Object before, Object value)
         {
             Node node = new Node(value);
@@ -156,7 +154,6 @@
             getElement.next = node;
             getElement.next.next = after;
         }
-
         public bool DeleteNode(Node node)
         {
             Node current = head;
@@ -177,7 +174,6 @@
 
             return true;
         }
-
         public bool Exists(Node node)
         {
             Node currentNode = head;
@@ -208,11 +204,51 @@
             retval += "|";
             return retval;
         }
+
         public void SwitchNodes(Node node1, Node node2)
         {
             if (!Exists(node1) || !Exists(node2)) return;
 
             (node1.data, node2.data) = (node2.data, node1.data);
+        }
+
+        public void RandomSort() //wrong sorting  system
+        {
+            Node current = head;
+            int node1 = int.Parse(string.Format("{0}", current.data));
+            int node2 = int.Parse(string.Format("{0}", current.next.data));
+
+            while(current != null)
+            {
+                if (current.next == null) return;
+                if(node1 > node2)
+                {
+                    current.data = node2;
+                    current.next.data = node1;
+                    current = head;
+                }
+                current = current.next;
+                if (current.next == null) return;
+                node1 = int.Parse(string.Format("{0}", current.data));
+                node2 = int.Parse(string.Format("{0}", current.next.data));   
+            }
+        }
+
+        public void InsertionSort()
+        {
+            Node currentNode = head.next;
+            while (currentNode != null)
+            {
+                for (var current = head; current != null; current = current.next)
+                {
+                    if (current == currentNode)
+                        break;
+                    if ((int)current.data < (int)currentNode.data)
+                        continue;
+                    (current.data, currentNode.data) = (currentNode.data, current.data);
+                }
+                currentNode = currentNode.next;
+            }
         }
     }   
 }
