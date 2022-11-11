@@ -103,7 +103,7 @@ namespace UnitTest
         }
 
         [Test]
-        public void TestInsertionSortInverse_RandomOrderOfElements_ReturnsCorrectOrder()
+        public void TestInsertionSortReverse_RandomOrderOfElements_ReturnsCorrectOrder()
         {
             SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
             list.InsertLast(1);

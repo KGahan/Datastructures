@@ -251,7 +251,7 @@
             }
         }
 
-        public void InsertionSortInverse()
+        public void InsertionSortReverse()
         {
             Node currentNode = head.next;
             while (currentNode != null)
