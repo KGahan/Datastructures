@@ -101,5 +101,17 @@ namespace UnitTest
             list.SwitchNodes(node1, node2);
             Assert.AreEqual(list.head.data, 1);
         }
+
+        [Test]
+        public void TestInsertionSortInverse_RandomOrderOfElements_ReturnsCorrectOrder()
+        {
+            SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
+            list.InsertLast(1);
+            list.InsertLast(5);
+            list.InsertLast(2);
+            list.InsertLast(4);
+            list.InsertionSortInverse();
+            Assert.AreEqual(list.head.data, 5);
+        }
     }
 }

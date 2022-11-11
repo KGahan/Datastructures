@@ -11,7 +11,7 @@ class Programm
         singleLinkedList.InsertFirst(3);
         Console.WriteLine(singleLinkedList.ToString());
 
-        singleLinkedList.InsertionSort();
+        singleLinkedList.InsertionSortInverse();
         Console.WriteLine(singleLinkedList.ToString());    
     }
 }
