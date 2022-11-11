@@ -110,8 +110,11 @@ namespace UnitTest
             list.InsertLast(5);
             list.InsertLast(2);
             list.InsertLast(4);
-            list.InsertionSortInverse();
+            list.InsertionSortReverse();
             Assert.AreEqual(list.head.data, 5);
+            Assert.AreEqual(list.head.next.data, 4);
+            Assert.AreEqual(list.head.next.next.data, 2);
+            Assert.AreEqual(list.Last().data, 1);
         }
     }
 }
