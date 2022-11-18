@@ -1,9 +1,12 @@
-﻿namespace SingleLinkedList
+﻿using Common;
+
+namespace SingleLinkedList
 {
-    public class SingleLinkedList
+    public class SingleLinkedList : IMyList
     {
         public Node head;
         public int index = 0;
+        private SortStrategy sortStrategy;
 
         public void InsertFirst(Object _value)
         {
@@ -189,21 +192,6 @@
             }
             return false;
         }
-        public override string ToString()
-        {
-            string retval = "";
-            if (head == null)
-                return "No elements in List";
-
-            var node = head;
-            while (node != null)
-            {
-                retval += "| " + node.data + " ";
-                node = node.next;
-            }
-            retval += "|";
-            return retval;
-        }
 
         public void SwitchNodes(Node node1, Node node2)
         {
@@ -266,6 +254,32 @@
                 }
                 currentNode = currentNode.next;
             }
+        }
+
+        public void SetSortStrategy(SortStrategy _sortStrategy)
+        {
+            sortStrategy = _sortStrategy;
+        }
+
+        public void Sort()
+        {
+            sortStrategy.Sort(this);
+        }
+
+        public override string ToString()
+        {
+            string retval = "";
+            if (head == null)
+                return "No elements in List";
+
+            var node = head;
+            while (node != null)
+            {
+                retval += "| " + node.data + " ";
+                node = node.next;
+            }
+            retval += "|";
+            return retval;
         }
     }   
 }

@@ -1,6 +1,5 @@
 using NUnit.Framework;
-using SingleLinkedList;
-using Stack;
+using Common;
 
 namespace UnitTest
 {
@@ -110,7 +109,9 @@ namespace UnitTest
             list.InsertLast(5);
             list.InsertLast(2);
             list.InsertLast(4);
-            list.InsertionSortReverse();
+            list.SetSortStrategy(new InsertionSortReverted());
+            list.Sort();
+
             Assert.AreEqual(list.head.data, 5);
             Assert.AreEqual(list.head.next.data, 4);
             Assert.AreEqual(list.head.next.next.data, 2);
