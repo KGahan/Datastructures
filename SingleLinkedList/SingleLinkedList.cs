@@ -10,7 +10,7 @@ namespace SingleLinkedList
 
         public void InsertFirst(Object _value)
         {
-            if(head == null)
+            if (head == null)
             {
                 head = new Node(_value);
                 index++;
@@ -41,7 +41,7 @@ namespace SingleLinkedList
             Node node = new Node(_value);
 
             if (head == null)
-            { 
+            {
                 head = node;
                 index++;
             }
@@ -61,7 +61,7 @@ namespace SingleLinkedList
 
         public void DeleteAt(int _index)
         {
-            if(_index > index)
+            if (_index > index)
             {
                 Console.WriteLine("this Object doesn't exist");
             }
@@ -112,7 +112,7 @@ namespace SingleLinkedList
         {
             Node last = head;
 
-            while(last.next != null)
+            while (last.next != null)
             {
                 last = last.next;
             }
@@ -138,13 +138,13 @@ namespace SingleLinkedList
 
             while (!current.data.Equals(element))
             {
-                if(current.next == null) 
+                if (current.next == null)
                 {
                     Node node = new Node(null);
-                    return node; 
+                    return node;
                 }
 
-                current = current.next;  
+                current = current.next;
             }
             return current;
         }
@@ -152,7 +152,7 @@ namespace SingleLinkedList
         {
             Node node = new Node(value);
             Node getElement = GetElement(before);
-            Node after = getElement.next;   
+            Node after = getElement.next;
 
             getElement.next = node;
             getElement.next.next = after;
@@ -181,9 +181,9 @@ namespace SingleLinkedList
         {
             Node currentNode = head;
             if (currentNode == node) return true;
-            while(currentNode != node)
+            while (currentNode != node)
             {
-                 
+
                 if (currentNode.next == node)
                 {
                     return true;
@@ -206,10 +206,10 @@ namespace SingleLinkedList
             int node1 = int.Parse(string.Format("{0}", current.data));
             int node2 = int.Parse(string.Format("{0}", current.next.data));
 
-            while(current != null)
+            while (current != null)
             {
                 if (current.next == null) return;
-                if(node1 > node2)
+                if (node1 > node2)
                 {
                     current.data = node2;
                     current.next.data = node1;
@@ -218,7 +218,7 @@ namespace SingleLinkedList
                 current = current.next;
                 if (current.next == null) return;
                 node1 = int.Parse(string.Format("{0}", current.data));
-                node2 = int.Parse(string.Format("{0}", current.next.data));   
+                node2 = int.Parse(string.Format("{0}", current.next.data));
             }
         }
 
@@ -256,6 +256,11 @@ namespace SingleLinkedList
             }
         }
 
+        public void SortDesc()
+        {
+            sortStrategy.SortDesc(this);
+        }
+
         public void SetSortStrategy(SortStrategy _sortStrategy)
         {
             sortStrategy = _sortStrategy;
@@ -281,5 +286,7 @@ namespace SingleLinkedList
             retval += "|";
             return retval;
         }
-    }   
+
+
+    }
 }
