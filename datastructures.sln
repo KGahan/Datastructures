@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleLinkedList", "SingleL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{0FB6250F-BA6B-49A4-B246-B702AE219B94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithmTests", "SortAlgorithmTests\SortAlgorithmTests.csproj", "{98F6F966-8A6A-4F25-B41A-1D15B78791ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortAlgorithmTests", "SortAlgorithmTests\SortAlgorithmTests.csproj", "{98F6F966-8A6A-4F25-B41A-1D15B78791ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackUnitTest", "StackUnitTest\StackUnitTest.csproj", "{AD981580-B960-4569-BC3B-912B7585F106}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{98F6F966-8A6A-4F25-B41A-1D15B78791ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98F6F966-8A6A-4F25-B41A-1D15B78791ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98F6F966-8A6A-4F25-B41A-1D15B78791ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD981580-B960-4569-BC3B-912B7585F106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD981580-B960-4569-BC3B-912B7585F106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD981580-B960-4569-BC3B-912B7585F106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD981580-B960-4569-BC3B-912B7585F106}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
