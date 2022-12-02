@@ -18,48 +18,4 @@ namespace Common
     {
         public abstract void Sort(IMyList list);
     }
-
-    public class InsertionSort : SortStrategy
-    {
-        public override void Sort(IMyList list)
-        {
-            var nextNode = list.First().next;
-
-            while (nextNode != null)
-            {
-                for (var cur = list.First(); cur.next != null; cur = cur.next)
-                {
-                    if (cur == nextNode)
-                        break;
-                    if ((int)cur.data < (int)nextNode.data)
-                        continue;
-                    (cur.data, nextNode.data) = (nextNode.data, cur.data);
-                }
-                nextNode = nextNode.next;
-            }
-            Console.WriteLine("InsertionSorted list ");
-        }
-    }
-
-    public class InsertionSortReverted : SortStrategy
-    {
-        public override void Sort(IMyList list)
-        {
-            var nextNode = list.First().next;
-
-            while (nextNode != null)
-            {
-                for (var cur = list.First(); cur.next != null; cur = cur.next)
-                {
-                    if (cur == nextNode)
-                        break;
-                    if ((int)cur.data > (int)nextNode.data)
-                        continue;
-                    (cur.data, nextNode.data) = (nextNode.data, cur.data);
-                }
-                nextNode = nextNode.next;
-            }
-            Console.WriteLine("InsertionSorted list ");
-        }
-    }
 }
