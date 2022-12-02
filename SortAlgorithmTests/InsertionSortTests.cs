@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace SortAlgorithmTests
 {
-    public class Tests
+    public class InsertionSortTests
     {
         [SetUp]
         public void Setup()
