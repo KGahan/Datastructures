@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackUnitTest", "StackUnitT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj", "{FC139D1B-F57E-437E-AC26-BC3987B54B3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueTests", "QueueTests\QueueTests.csproj", "{CA3A2BDD-50F1-44E3-AD3D-E12D734B4C97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueUnitTests", "QueueTests\QueueUnitTests.csproj", "{CA3A2BDD-50F1-44E3-AD3D-E12D734B4C97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
