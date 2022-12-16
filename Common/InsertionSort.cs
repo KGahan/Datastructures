@@ -26,6 +26,11 @@ namespace Common
             }
             Console.WriteLine("InsertionSorted list ");
         }
+
+        public override void SortDesc(IMyList list)
+        {
+             
+        }
     }
 
     public class InsertionSortReverted : SortStrategy
@@ -47,6 +52,11 @@ namespace Common
                 nextNode = nextNode.next;
             }
             Console.WriteLine("InsertionSorted list ");
+        }
+
+        public override void SortDesc(IMyList list)
+        {
+
         }
     }
 }
