@@ -15,11 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortAlgorithmTests", "SortAlgorithmTests\SortAlgorithmTests.csproj", "{98F6F966-8A6A-4F25-B41A-1D15B78791ED}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackUnitTest", "StackUnitTest\StackUnitTest.csproj", "{AD981580-B960-4569-BC3B-912B7585F106}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatastructuresTests", "StackUnitTest\DatastructuresTests.csproj", "{AD981580-B960-4569-BC3B-912B7585F106}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj", "{FC139D1B-F57E-437E-AC26-BC3987B54B3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queue", "Queue\Queue.csproj", "{FC139D1B-F57E-437E-AC26-BC3987B54B3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueUnitTests", "QueueTests\QueueUnitTests.csproj", "{CA3A2BDD-50F1-44E3-AD3D-E12D734B4C97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverPatterTests", "ObserverPatterTests\ObserverPatterTests.csproj", "{81E67AAC-A124-43AF-8E58-DB386FD74226}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,10 +59,10 @@ Global
 		{FC139D1B-F57E-437E-AC26-BC3987B54B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC139D1B-F57E-437E-AC26-BC3987B54B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC139D1B-F57E-437E-AC26-BC3987B54B3D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA3A2BDD-50F1-44E3-AD3D-E12D734B4C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA3A2BDD-50F1-44E3-AD3D-E12D734B4C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA3A2BDD-50F1-44E3-AD3D-E12D734B4C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA3A2BDD-50F1-44E3-AD3D-E12D734B4C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81E67AAC-A124-43AF-8E58-DB386FD74226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81E67AAC-A124-43AF-8E58-DB386FD74226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81E67AAC-A124-43AF-8E58-DB386FD74226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81E67AAC-A124-43AF-8E58-DB386FD74226}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
