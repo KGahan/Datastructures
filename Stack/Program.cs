@@ -1,6 +1,4 @@
-﻿using Stack;
-
-class Programm
+﻿class Programm
 {
     public static void Main(string[] args)
     {

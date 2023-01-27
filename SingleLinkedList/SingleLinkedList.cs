@@ -76,7 +76,6 @@ namespace SingleLinkedList
                 }
                 _next = previous.next.next;
                 previous.next = _next;
-
             }
         }
 
@@ -169,12 +168,11 @@ namespace SingleLinkedList
                 {
                     return false;
                 }
+                index++;
                 current = current.next;
             }
 
-            index++;
             DeleteAt(index);
-
             return true;
         }
         public bool Exists(Node node)
