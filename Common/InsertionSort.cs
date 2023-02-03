@@ -29,14 +29,6 @@ namespace Common
 
         public override void SortDesc(IMyList list)
         {
-             
-        }
-    }
-
-    public class InsertionSortReverted : SortStrategy
-    {
-        public override void Sort(IMyList list)
-        {
             var nextNode = list.First().next;
 
             while (nextNode != null)
@@ -52,11 +44,6 @@ namespace Common
                 nextNode = nextNode.next;
             }
             Console.WriteLine("InsertionSorted list ");
-        }
-
-        public override void SortDesc(IMyList list)
-        {
-
         }
     }
 }

@@ -18,7 +18,7 @@ namespace SortAlgorithmTests
             list.InsertLast(5);
             list.InsertLast(2);
             list.InsertLast(4);
-            list.SetSortStrategy(new InsertionSort());
+            list.SetSortStrategy(SortFactory.StrategyGenerator("InsertionSort")); // new InsertionSort());
             list.Sort();
 
             Assert.AreEqual(list.head.data, 1);
@@ -35,8 +35,8 @@ namespace SortAlgorithmTests
             list.InsertLast(5);
             list.InsertLast(2);
             list.InsertLast(4);
-            list.SetSortStrategy(new InsertionSortReverted());
-            list.Sort();
+            list.SetSortStrategy(SortFactory.StrategyGenerator("InsertionSort"));
+            list.SortDesc();
 
             Assert.AreEqual(list.head.data, 5);
             Assert.AreEqual(list.head.next.data, 4);
