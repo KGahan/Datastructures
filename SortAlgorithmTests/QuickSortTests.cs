@@ -49,11 +49,9 @@ namespace SortAlgorithmTests
                     arr[j] = temp;
                 }
             }
-
             int temp1 = arr[i + 1];
             arr[i + 1] = arr[high];
             arr[high] = temp1;
-
             return i + 1;
         }
     }
