@@ -32,5 +32,29 @@ namespace StackTests
 
             Assert.IsFalse(result);
         }
+
+        [Test]
+        public void CheckStringMirrored_ValidMirroredString_ReturnsTrue()
+        {
+            Stack<char> stack1 = new Stack<char>();
+            Stack<char> stack2 = new Stack<char>();
+            var stringMirrored = new StringMirrored(stack1, stack2);
+
+            int result = stringMirrored.stringMirrored("brot", "torb");
+
+            Assert.AreEqual(result, 0);
+        }
+
+        [Test]
+        public void CheckStringMirrored_InvalidMirroredString_ReturnsFalse()
+        {
+            Stack<char> stack1 = new Stack<char>();
+            Stack<char> stack2 = new Stack<char>();
+            var stringMirrored = new StringMirrored(stack1, stack2);
+
+            int result = stringMirrored.stringMirrored("apfel", "birne");
+
+            Assert.AreEqual(result, 1);
+        }
     }
 }
