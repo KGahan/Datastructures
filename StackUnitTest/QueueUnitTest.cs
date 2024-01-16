@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace QueueUnitTests
+namespace DatastructuresTests
 {
     public class QueueUnitTests
     {

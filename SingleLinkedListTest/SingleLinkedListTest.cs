@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using Common;
 
-namespace UnitTest
+namespace SingleLinkedListTest
 {
     public class Tests
     {
@@ -14,7 +14,7 @@ namespace UnitTest
         [Test]
         public void TestLinkedListCount_AddItems_ReturnsCorrectCount()
         {
-            SingleLinkedList.SingleLinkedList list= new SingleLinkedList.SingleLinkedList();
+            SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
             list.InsertFirst(1);
             list.InsertFirst(2);
             list.InsertFirst(3);
@@ -77,7 +77,7 @@ namespace UnitTest
         }
 
         [Test]
-        public void TestLSwitchNode_SecondIsFirstNode_ReturnsSwitchedList() 
+        public void TestLSwitchNode_SecondIsFirstNode_ReturnsSwitchedList()
         {
             SingleLinkedList.SingleLinkedList list = new SingleLinkedList.SingleLinkedList();
             list.InsertLast(1);

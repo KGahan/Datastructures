@@ -23,7 +23,6 @@
         {
             Node currentElement = root;
 
-
             if (root == null)
             {
                 root = new Node(data);

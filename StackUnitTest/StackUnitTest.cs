@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using Stack;
 
-namespace StackUnitTest
+namespace DatastructuresTests
 {
     public class StackUnitTest
     {
